@@ -2,9 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Gift, ShoppingBag, Coffee, Ticket } from "lucide-react";
+import { useState } from "react";
+import { toast } from "sonner";
 
 const Rewards = () => {
-  const rewards = [
+  const [userPoints, setUserPoints] = useState(1247);
+  const [rewards, setRewards] = useState([
     { 
       id: 1, 
       name: "Vale Supermercado", 
@@ -37,7 +40,14 @@ const Rewards = () => {
       description: "R$ 100 em compras",
       available: false 
     },
-  ];
+  ]);
+
+  const handleRedeem = (reward: typeof rewards[0]) => {
+    if (userPoints >= reward.points && reward.available) {
+      setUserPoints(prev => prev - reward.points);
+      toast.success(`${reward.name} resgatado com sucesso! 🎉`);
+    }
+  };
 
   return (
     <div className="p-6 pb-24 space-y-6">
@@ -50,7 +60,7 @@ const Rewards = () => {
       <Card className="p-6 bg-gradient-to-br from-primary to-accent text-primary-foreground">
         <div className="text-center space-y-2">
           <p className="text-sm opacity-90">Saldo disponível</p>
-          <p className="text-5xl font-bold">1.247</p>
+          <p className="text-5xl font-bold">{userPoints.toLocaleString('pt-BR')}</p>
           <p className="text-sm opacity-90">pontos acumulados</p>
         </div>
       </Card>
@@ -59,7 +69,7 @@ const Rewards = () => {
       <div className="space-y-4">
         {rewards.map((reward) => {
           const Icon = reward.icon;
-          const canRedeem = reward.points <= 1247 && reward.available;
+          const canRedeem = reward.points <= userPoints && reward.available;
           
           return (
             <Card key={reward.id} className={`p-4 ${!reward.available ? "opacity-60" : ""}`}>
@@ -91,6 +101,7 @@ const Rewards = () => {
                       size="sm" 
                       disabled={!canRedeem}
                       variant={canRedeem ? "default" : "outline"}
+                      onClick={() => handleRedeem(reward)}
                     >
                       {canRedeem ? "Resgatar" : "Pontos insuficientes"}
                     </Button>
