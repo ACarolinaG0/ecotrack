@@ -1,20 +1,34 @@
-import Hero from "@/components/Hero";
-import AppShowcase from "@/components/AppShowcase";
-import HowItWorks from "@/components/HowItWorks";
-import Benefits from "@/components/Benefits";
-import ImpactMetrics from "@/components/ImpactMetrics";
-import Footer from "@/components/Footer";
+import { useState } from "react";
+import MobileLayout from "@/components/MobileLayout";
+import BottomNav from "@/components/BottomNav";
+import Dashboard from "./Dashboard";
+import Register from "./Register";
+import Ranking from "./Ranking";
+import Rewards from "./Rewards";
 
 const Index = () => {
+  const [activeTab, setActiveTab] = useState("dashboard");
+
+  const renderContent = () => {
+    switch (activeTab) {
+      case "dashboard":
+        return <Dashboard />;
+      case "register":
+        return <Register />;
+      case "ranking":
+        return <Ranking />;
+      case "rewards":
+        return <Rewards />;
+      default:
+        return <Dashboard />;
+    }
+  };
+
   return (
-    <div className="min-h-screen">
-      <Hero />
-      <AppShowcase />
-      <HowItWorks />
-      <Benefits />
-      <ImpactMetrics />
-      <Footer />
-    </div>
+    <MobileLayout>
+      {renderContent()}
+      <BottomNav activeTab={activeTab} onTabChange={setActiveTab} />
+    </MobileLayout>
   );
 };
 
