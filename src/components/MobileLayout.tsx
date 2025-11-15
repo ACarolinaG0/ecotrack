@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import logo from "@/assets/ecotrack-logo.png";
 
 interface MobileLayoutProps {
   children: ReactNode;
@@ -25,8 +26,13 @@ const MobileLayout = ({ children }: MobileLayoutProps) => {
               </div>
             </div>
             
+            {/* Logo header */}
+            <div className="bg-card px-6 py-4 flex justify-center border-b border-border">
+              <img src={logo} alt="EcoTrack" className="h-12" />
+            </div>
+            
             {/* App content */}
-            <div className="h-[680px] overflow-y-auto">
+            <div className="h-[630px] overflow-y-auto">
               {children}
             </div>
           </div>

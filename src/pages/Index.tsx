@@ -5,9 +5,19 @@ import Dashboard from "./Dashboard";
 import Register from "./Register";
 import Ranking from "./Ranking";
 import Rewards from "./Rewards";
+import Login from "./Login";
 
 const Index = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeTab, setActiveTab] = useState("dashboard");
+
+  const handleLogin = () => {
+    setIsLoggedIn(true);
+  };
+
+  if (!isLoggedIn) {
+    return <Login onLogin={handleLogin} />;
+  }
 
   const renderContent = () => {
     switch (activeTab) {
