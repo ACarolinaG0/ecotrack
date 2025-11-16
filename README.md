@@ -144,7 +144,7 @@ Contribuição direta para os ODS da ONU:
 
 ```sh
 git clone https://github.com/ACarolinaG0/ecotrack.git
-cd ecotrack-app-showcase
+cd ecotrack
 npm install
 npm run dev
 Abra no navegador:
