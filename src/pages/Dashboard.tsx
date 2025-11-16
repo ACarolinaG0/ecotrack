@@ -23,7 +23,7 @@ const Dashboard = () => {
 
       {/* Welcome */}
       <div>
-        <h1 className="text-2xl font-bold text-foreground">Olá, Maria! 👋</h1>
+        <h1 className="text-2xl font-bold text-foreground">Olá, Ana! 👋</h1>
         <p className="text-muted-foreground">Status dos containers em tempo real</p>
       </div>
 

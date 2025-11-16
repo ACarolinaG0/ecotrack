@@ -7,7 +7,7 @@ const Ranking = () => {
     { id: 1, name: "João Silva", apt: "301", points: 2450, position: 1 },
     { id: 2, name: "Maria Santos", apt: "205", points: 1890, position: 2 },
     { id: 3, name: "Pedro Costa", apt: "102", points: 1650, position: 3 },
-    { id: 4, name: "Ana Paula", apt: "404", points: 1247, position: 4, isCurrentUser: true },
+    { id: 4, name: "Ana Carolina", apt: "404", points: 1247, position: 4, isCurrentUser: true },
     { id: 5, name: "Carlos Lima", apt: "203", points: 1120, position: 5 },
     { id: 6, name: "Julia Mendes", apt: "501", points: 980, position: 6 },
   ];
