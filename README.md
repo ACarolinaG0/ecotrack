@@ -66,7 +66,6 @@ Sensores IoT → MQTT/HTTP
 Dashboard Web (Síndico)
 
 yaml
-Copiar código
 
 ---
 
@@ -151,5 +150,4 @@ npm run dev
 Abra no navegador:
 
 arduino
-Copiar código
 http://localhost:3000
