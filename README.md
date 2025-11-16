@@ -1,156 +1,155 @@
-🌱 EcoTrack – Gestão Inteligente de Resíduos para Condomínios
+<h1 align="center">🌱 EcoTrack – Gestão Inteligente de Resíduos para Condomínios</h1>
 
-O EcoTrack é uma solução inteligente que conecta tecnologias IoT, educação ambiental e gamificação para transformar a forma como condomínios realizam a coleta seletiva.
-A plataforma combina sensores em tempo real, um aplicativo mobile intuitivo e um dashboard para administradores, tornando a gestão de resíduos mais eficiente, sustentável e engajadora.
+<p align="center">
+  <img src="https://img.shields.io/badge/IoT-ESP32-blue" />
+  <img src="https://img.shields.io/badge/Status-Protótipo-green" />
+  <img src="https://img.shields.io/badge/Licença-MIT-yellow" />
+</p>
 
-📱 Sobre o Projeto
+<p align="center">
+  O <strong>EcoTrack</strong> é uma solução inteligente que conecta tecnologias IoT, educação ambiental e gamificação para transformar a coleta seletiva em condomínios.  
+  Com sensores de monitoramento em tempo real, um app intuitivo e um dashboard administrativo, o EcoTrack torna a gestão de resíduos mais eficiente, sustentável e engajadora.
+</p>
 
-O EcoTrack utiliza sensores IoT instalados nos coletores de resíduos para monitorar:
+---
 
-Nível de preenchimento
+## 📱 Sobre o Projeto
 
-Status de coleta
+O EcoTrack utiliza sensores IoT instalados nos coletores para monitorar:
 
-Histórico de descartes
+- 📊 Nível de preenchimento  
+- 🔄 Status da coleta  
+- 🗂 Histórico de descartes  
+- ♻ Volume por categoria de material  
 
-Volume por categoria de material
+Os moradores acompanham seu impacto ambiental, recebem alertas e acumulam pontos ao reciclar, incentivando práticas sustentáveis por meio de gamificação.
 
-O aplicativo permite que moradores acompanhem seu impacto, recebam alertas e acumulem pontos conforme reciclam corretamente, criando um ambiente gamificado que incentiva práticas sustentáveis.
+---
 
-🚀 Principais Funcionalidades
-👤 Para Moradores
+## 🚀 Principais Funcionalidades
 
-Dashboard com nível dos resíduos em tempo real
+### 👤 Para Moradores
+- Dashboard com nível dos resíduos em tempo real  
+- Registro de descarte por tipo de material  
+- Sistema de pontos e recompensas  
+- Ranking entre moradores  
+- Dicas e educação ambiental  
+- Histórico pessoal de reciclagem  
 
-Registro de descarte por tipo de material
+### 🏢 Para Síndicos e Administradores
+- Visão geral dos coletores  
+- Relatórios automáticos mensais  
+- Alertas de situações críticas  
+- Gestão de moradores e desempenho geral  
 
-Sistema de pontos e recompensas
+---
 
-Ranking entre moradores
+## 🛠 Tecnologias Utilizadas
 
-Dicas e educação ambiental
+- **Frontend:** React, HTML/CSS/JavaScript  
+- **Prototipação Mobile:** Figma + IA (Galileo)  
+- **Backend:** Node.js / Python (a definir)  
+- **IoT:** ESP32 + sensores ultrassônicos / load cell  
+- **Banco de Dados:** Firebase / PostgreSQL  
+- **Infraestrutura:** AWS / Azure / Render  
 
-Histórico pessoal de reciclagem
+> 🔧 *Este README pode ser atualizado conforme a stack final for definida.*
 
-🏢 Para Síndicos e Administradores
+---
 
-Visão geral dos coletores e status de ocupação
+## 🧩 Arquitetura do Sistema
 
-Relatórios automáticos mensais
-
-Alertas de coleta e situações críticas
-
-Gestão de moradores e desempenho geral
-
-🛠 Tecnologias Utilizadas (sugerido)
-
-Frontend: React, HTML/CSS/JavaScript
-
-Mobile prototyping: Figma + IA (Galileo)
-
-Backend: Node.js / Python (a definir)
-
-IoT: ESP32 + sensores ultrassônicos / load cell
-
-Banco de Dados: Firebase / PostgreSQL
-
-Infraestrutura: (AWS / Azure / Render)
-
-(Se quiser, posso adaptar exatamente para o stack que você já usa.)
-
-🧩 Arquitetura Geral do Sistema
 [Moradores] → App Mobile → API → Banco de Dados
-                                 ↑
-                      Sensores IoT → MQTT/HTTP
-                                 ↓
-                       Dashboard Web (Síndico)
+↑
+Sensores IoT → MQTT/HTTP
+↓
+Dashboard Web (Síndico)
 
-🎯 Público-Alvo
+yaml
+Copiar código
 
-Condomínios urbanos
+---
 
-Gestores de sustentabilidade
+## 🎯 Público-Alvo
 
-Moradores engajados
+- Condomínios urbanos  
+- Gestores de sustentabilidade  
+- Moradores engajados  
+- Estabelecimentos públicos com alta geração de resíduos  
 
-Estabelecimentos públicos com alta geração de resíduos
+---
 
-🌍 Problema que o EcoTrack resolve
+## 🌍 Problemas que o EcoTrack Resolve
 
-Falta de gestão automatizada
+- Falta de gestão automatizada  
+- Baixa adesão à coleta seletiva  
+- Custos operacionais elevados  
+- Baixo engajamento dos moradores  
+- Ausência de dados reais sobre resíduos gerados  
 
-Baixa adesão da coleta seletiva
+---
 
-Custos operacionais elevados
+## 💡 Proposta de Valor
 
-Falta de engajamento dos moradores
+- 💰 Redução de custos de coleta  
+- 🎮 Gamificação para aumentar a participação  
+- 📈 Decisões baseadas em dados  
+- 🌱 Melhora do impacto ambiental  
+- 🕒 Economia de tempo para o síndico  
 
-Falta de dados reais sobre resíduos gerados
+---
 
-💡 Proposta de Valor
+## 💸 Modelo de Negócio
 
-Reduz custo de coleta → eliminando idas desnecessárias
+Mensalidade recorrente (R$ 250 – R$ 300) por condomínio, incluindo:
 
-Aumenta a adesão dos moradores via gamificação
+- Acesso à plataforma  
+- Monitoramento IoT  
+- Relatórios mensais  
+- Suporte técnico  
+- Gamificação integrada  
 
-Fornece dados concretos para decisões
+---
 
-Melhora o impacto ambiental do condomínio
+## 📊 Impacto Ambiental
 
-Automatiza a operação e economiza tempo do síndico
+Contribuição direta para os ODS da ONU:
 
-💸 Modelo de Negócio
+- **ODS 11:** Cidades e Comunidades Sustentáveis  
+- **ODS 12:** Consumo e Produção Responsáveis  
+- **ODS 13:** Ação Contra a Mudança Global do Clima  
 
-Mensalidade recorrente para condomínios (R$ 250 – R$ 300) incluindo:
+---
 
-Acesso à plataforma
+## 👥 Equipe
 
-Monitoramento IoT
+| Nome | Função |
+|------|--------|
+| Ana Carolina Gomes | Hustler – Gestão e Estratégia |
+| Lucca Meneses | Hacker – UX/UI Design |
+| Maria Fernanda Gosula | Hipster – Sustentabilidade |
+| Charles Moese | Hacker – Engenharia de Computação |
 
-Relatórios
+---
 
-Suporte técnico
+## 🧪 Status do Projeto
 
-Gamificação integrada
+- ✔ Ideação  
+- ✔ Pitch inicial  
+- ✔ Protótipo realista  
+- ☐ Testes em condomínio piloto  
 
-📊 Impacto Ambiental
+---
 
-O EcoTrack contribui diretamente para os seguintes ODS (ONU):
+## 📥 Como executar o projeto
 
-ODS 11: Cidades e Comunidades Sustentáveis
-
-ODS 12: Consumo e Produção Responsáveis
-
-ODS 13: Ação Contra a Mudança Global do Clima
-
-👥 Equipe
-
-Ana Carolina Gomes – Hustler (Gestão e Estratégia)
-
-Lucca Meneses – Hacker (UX/UI Design)
-
-Maria Fernanda Gosula – Hipster (Sustentabilidade)
-
-Charles Moese – Hacker (Engenharia de Computação)
-
-🧪 Status do Projeto
-
-✔ Ideação
-
-✔ Pitch inicial
-
-✔ Protótipo no Realista
-
-☐ Testes em condomínio piloto
-
-📥 Como executar o projeto
-
+```sh
 git clone https://github.com/ACarolinaG0/ecotrack.git
 cd ecotrack-app-showcase
 npm install
 npm run dev
+Abra no navegador:
 
-
-Abra em:
-
+arduino
+Copiar código
 http://localhost:3000
